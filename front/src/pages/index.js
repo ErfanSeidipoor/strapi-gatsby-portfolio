@@ -6,6 +6,7 @@ import Services from "../components/Services"
 import Jobs from "../components/Jobs"
 import Projects from "../components/Projects"
 import Blogs from "../components/Blogs"
+import SEO from "../components/SEO"
 
 export const query = graphql`
   {
@@ -62,10 +63,9 @@ export default () => {
     allStrapiBlogs: {edges: blogs},
   } = data
 
-  console.log(blogs)
-
   return (
     <Layout>
+      <SEO title={'Home'} description="This is our home page"/>
       <Hero />
       <Services />
       <Jobs />
